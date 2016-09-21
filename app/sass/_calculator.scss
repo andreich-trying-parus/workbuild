@@ -1,0 +1,348 @@
+.calculator {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  color: $main-color;
+  font-size: 18px;
+  background-color: white;
+
+  & .sqr-green {
+    height: 130px;
+    top: 65px;
+    left: 535px;
+  }
+
+  & h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__sqr-730,
+  &__sqr-270,
+  &__sqr-730-2,
+  &__sqr-270-2 {
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: rgba(170, 170, 170, 0.2);
+  }
+
+  &__sqr-730 {
+    width: 730px;
+    height: 730px;
+    top: -110px;
+    left: -590px;
+  }
+
+  &__sqr-270 {
+    width: 270px;
+    height: 270px;
+    top: 340px;
+    left: -180px;
+  }
+
+  &__sqr-730-2 {
+    width: 730px;
+    height: 730px;
+    top: -150px;
+    left: 1460px;
+  }
+
+  &__sqr-270-2 {
+    width: 270px;
+    height: 270px;
+    top: -80px;
+    left: 1340px;
+  }
+
+  &__triangle-270 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -45px;
+    margin: 0 auto;
+  	width: 0;
+  	height: 0;
+  	border-left: 205px solid transparent;
+  	border-right: 205px solid transparent;
+  	border-bottom: 205px solid #e8e8e8;
+  }
+
+  &__triangle-270 span {
+    position: absolute;
+    width: 400px;
+    top: 120px;
+    left: -85px;
+  }
+}
+
+/*************** СЛАЙДЕР ****************/
+.slider-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 1000px;
+    height: 10px;
+    background-color: #ebebeb;
+    z-index: 1;
+  }
+  &::after {
+    width: 50px;
+    left: 0;
+    background-color: #c7c7c7;
+  }
+}
+.slider {
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+}
+.slidershell {
+  border: 0 none;
+  position: relative;
+}
+.sliderfill {
+  position: absolute;
+  pointer-events: none;
+  background: #c7c7c7;
+  z-index: 130;
+}
+.sliderthumb {
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/thumb.png');
+  background-size: 40px 40px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 0 none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 150;
+}
+.slidervalue {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 0 none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  pointer-events: none;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 40%;
+  -webkit-appearance: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0 none;
+  background: transparent;
+  color: transparent;
+  overflow: visible;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 100%;
+  -moz-appearance: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0 none;
+  background: transparent;
+  color: transparent;
+  overflow: visible;
+}
+input[type=range] {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  margin: 0px;
+  padding: 0px;
+  border: 0 none;
+  background: transparent;
+  color: transparent;
+  overflow: visible;
+}
+input[type=range]::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 70px;
+  left: 1px;
+  top: 0px;
+  z-index: 1;
+  box-shadow: 18px 0 0 #c7c7c7,
+              448px 0 0 #c7c7c7,
+              878px 0 0 #c7c7c7;
+}
+input[type=range]::before {
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  left: -50px;
+  color: #272525;
+  content: "Ваши инвестиции:"
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+input[type=range]::-ms-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 0px;
+  border: 0 none;
+  background: transparent;
+}
+input[type=range]::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 0px;
+  border: 0 none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 0px;
+  border: 0 none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+input[type=range]::-ms-tooltip {
+  display: none;
+}
+output {
+  display: block;
+  position: relative;
+  text-align: right;
+  top: -90px;
+  left: 50px;
+}
+output::after {
+  content: " руб.";
+}
+.milestone {
+  display: flex;
+}
+.milestone-item {
+  position: relative;
+  bottom: 65px;
+  height: 70px;
+  width: 50%;
+
+  &:first-child::after,
+  &:first-child::before,
+  &:last-child::after {
+    display: block;
+    position: relative;
+    top: 85px;
+    color: #c7c7c7;
+  }
+
+  &:first-child::after {
+    left: 0px;
+    top: 60px;
+    content: "0 руб.";
+  }
+
+  &:first-child::before {
+    left: 400px;
+    content: "5 000 000 руб.";
+  }
+
+  &:last-child::after {
+    left: 375px;
+    content: "10 000 000 руб.";
+  }
+}
+
+/*************** табличка значений ****************/
+table {
+  width: 1000px;
+  margin: 0 auto;
+
+  & td {
+    padding: 0;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-weight: 700;
+  }
+
+  & td:nth-child(2n){
+    padding-right: 80px;
+  }
+
+  & tr:nth-child(2) td:last-child,
+  & tr:nth-child(3) td:last-child {
+    text-decoration: underline;
+    vertical-align: bottom;
+    padding: 0;
+  }
+
+  & th {
+    padding-bottom: 30px;
+  }
+}
+
+.calculator__bepartner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 0px;
+  border-top: 45px solid #c6d744;
+	border-left: 45px solid transparent;
+	border-right: 45px solid transparent;
+  width: 410px;
+	height: 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.calculator__bepartner:hover {
+  border-top: 45px solid #8F9939;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  color: white;
+}
+.calculator__bepartner span {
+  position: relative;
+  font-weight: 900;
+  bottom: 34px;
+}
+.are-u-ready {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  top: 150px;
+  font-size: 14px;
+}
+.are-u-ready:last-child {
+  font-weight: 900;
+  margin-top: 27px;
+}

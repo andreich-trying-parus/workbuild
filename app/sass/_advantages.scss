@@ -1,0 +1,88 @@
+.advantages,
+.advantages__dotted,
+.advantages__darken {
+  width: 1600px;
+  height: 724px;
+}
+.advantages {
+  position: relative;
+  margin-top: 76px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  z-index: 101;
+  background: url(../img/coach.png) bottom left no-repeat,
+              url(../img/coach-back.jpg) 100% no-repeat;
+  &__dotted {
+    background-image:
+      -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image:
+      -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image:
+      -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image:
+      repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 8px 8px;
+       -moz-background-size: 8px 8px;
+            background-size: 8px 8px;
+  }
+
+  &__darken {
+    background-color: rgba(39, 37, 37, 0.3);
+  }
+
+  & span {
+    position: relative;
+    display: block;
+    left: 400px;
+    top: 30px;
+    font-size: 30px;
+
+    &:first-child {
+      padding-top: 110px;
+    }
+
+    &:nth-child(2) {
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(4) {
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    & img {
+      position: static;
+      padding-left: 10px;
+    }
+  }
+
+  & img {
+    position: absolute;
+    top: 90px;
+    right: 160px;
+  }
+
+  & p {
+    position: absolute;
+    width: 580px;
+    bottom: -30px;
+    right: 210px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    border-left: 1px solid $accent-color;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  & button {
+    width: 220px;
+    margin-top: 60px;
+    margin-left: 407px;
+  }
+}

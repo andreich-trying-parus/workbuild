@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 180px;
+  background-color: black;
+  color: #a1a1a5;
+  & a,
+  & a:hover {
+    color: #c32b46;
+  }
+  & span:first-child {
+    display: flex;
+    align-items: center;
+  }
+}

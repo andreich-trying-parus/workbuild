@@ -1,0 +1,52 @@
+.contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  color: #272525;
+  background: url(../img/men.png) 10% 100% no-repeat,
+  url(../img/women.png) 85% 100% no-repeat;
+  background-color: white;
+
+  & h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  & .sqr-green {
+    top: 65px;
+    right: 65px;
+  }
+
+  & p {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  & span {
+    display: block;
+    font-weight: 900;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  & input {
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #272525;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  & button {
+    width: 250px;
+  }
+}

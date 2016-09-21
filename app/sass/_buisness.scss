@@ -1,0 +1,50 @@
+.buisness {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+  color: white;
+  background: url(../img/training-room.png);
+  text-transform: uppercase;
+
+  & .sqr-green {
+    top: 65px;
+    left: -140px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 30px;
+    left: -20px;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+  }
+
+  &-row:last-child {
+    padding-top: 0;
+    margin-left: 70px;
+  }
+
+  & figure {
+    display: inline-block;
+    width: 210px;
+    margin-right: 180px;
+  }
+
+  & figure:last-child {
+    margin: 0;
+  }
+  & figcaption {
+    margin-top: 15px;
+    margin-left: 40px;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,76 @@
+.tobepartner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 590px;
+  color: white;
+  background: url(../img/tobepartner-back.jpg);
+  overflow: hidden;
+
+  & h2 {
+    text-transform: uppercase;
+    bottom: 5px;
+  }
+
+  & .sqr-green {
+    top: 60px;
+    left: -160px;
+  }
+
+  &__sqr-410,
+  &__sqr-245 {
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: rgba(170, 170, 170, 0.2);
+  }
+
+  &__sqr-410 {
+    width: 410px;
+    height: 410px;
+    top: 40px;
+    right: 20px;
+  }
+  &__sqr-245 {
+    width: 245px;
+    height: 245px;
+    top: 150px;
+    left: 180px;
+  }
+  &__wrapper {
+    position: relative;
+    top: 60px;
+  }
+  &__row {
+    display: flex;
+    position: relative;
+
+    &:first-child {
+      left: -90px;
+    }
+
+    &:last-child {
+      left: 90px;
+    }
+  }
+
+  & figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 330px;
+    height: 200px;
+    margin-right: 50px;
+
+    & img {
+      height: 70px;
+    }
+  }
+
+  & figcaption {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
